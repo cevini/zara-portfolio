@@ -294,6 +294,9 @@ header{
   border-radius: 0.5rem;
   overflow: hidden;
 }
+.hide{
+  display: none
+}
 .portfolio-box:hover .portfolio-overlay{
   top: 0;
   transition: .3s all ease 0s
@@ -328,6 +331,25 @@ header{
 .portfolio-overlay i:hover{
   background: var(--container-color);
   transition: .3s all linear
+}
+.portfolio ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px
+}
+.list{
+  background: var(--main-color);
+  padding: 12px 20px;
+  margin: 5px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.list-active{
+  background: #6c2018
 }
 /*Contato*/
 .contact{
