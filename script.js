@@ -82,3 +82,29 @@ window.addEventListener("scroll", () => {
         window.scroll(newX, newY);
       }, 1000 / 60); // 60 fps
     };
+
+//Portfólio Galeria
+let list = document.querySelectorAll('.list');
+let portfolioBox = document.querySelectorAll('.portfolio-box');
+
+for(let i = 0; i<list.length; i++){
+  list[i].addEventListener('click', function(){
+    for(let j = 0; j<list.length; j++){
+      list[j].classList.remove('list-active');
+    }
+    this.classList.add('list-active');
+
+    let dataFilter = this.getAttribute('data-filter');
+
+    for( let k = 0; k<portfolioBox.length; k++){
+      portfolioBox[k].classList.remove('list-active');
+      portfolioBox[k].classList.add('hide');
+
+      if(portfolioBox[k].getAttribute('data-item') == dataFilter ||
+      dataFilter == "tudo"){
+        portfolioBox[k].classList.remove('hide');
+        portfolioBox[k].classList.add('list-active');
+      }
+    }
+  })
+}
