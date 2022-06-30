@@ -573,7 +573,7 @@ header{
     line-height: 3.2rem
   }
   .home-text p br{
-    display: contents;
+    display: block;
   }
   .about-data h2{
     font-size: 1.5rem;
