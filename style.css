@@ -45,9 +45,6 @@ body{
   background: var(--main-color);
   transition: .3s all linear
 }
-.color{
-
-}
 .container{
   max-width: 960px;
   margin: auto;
@@ -82,7 +79,7 @@ header{
 .nav{
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 20px 0;
 }
 .logo{
@@ -114,7 +111,8 @@ header{
   grid-row-gap: 5px;
   cursor: pointer;
   z-index: 200;
-  transition: 0.3s
+  transition: 0.3s;
+
 }
 .menu-icon div{
   display: block;
@@ -175,6 +173,16 @@ header{
   font-size: 1.1rem;
   color: var(--main-color)
 }
+.home-text h3:hover{
+  color: var(--bg-color);
+  background-color: #232323;
+  text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+  transition: .3s all linear;
+  padding: 0 10px 0;
+  border-radius: 50%;
+  filter: blur(100%);
+  cursor: default
+}
 .home-text h3::before{
   content: '';
   position: absolute;
@@ -217,7 +225,7 @@ header{
   background: var(--main-color);
   transition: .3s all linear
 }
-.home-text .color{
+.home-text .color, .about .color{
   color: var(--main-color)
 }
 /*Sobre*/
@@ -298,7 +306,7 @@ header{
 /*Portfólio*/
 .portfolio-content{
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(3,1fr);
   grid-gap: 2rem
 }
 .portfolio-box{
@@ -327,6 +335,7 @@ header{
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   justify-content: center;
   background: rgba(161, 65, 54, 0.5);
 }
@@ -374,7 +383,7 @@ header{
   grid-template-columns: repeat(2,auto);
   gap: 2rem;
 }
-.contact-content h4{
+.contact-box h4{
   color: var(--main-color);
   border-bottom: 4px solid var(--main-color);
   width: 97px;
@@ -462,6 +471,9 @@ header{
   }
 }
 @media (max-width: 775px){
+  .nav{
+    justify-content: flex-end;
+  }
   .logo{
     font-size: 1.1rem;
   }
@@ -475,6 +487,11 @@ header{
   }
   .home-text p{
     font-size: 0.825rem;
+  }
+  .portfolio-content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 2rem
   }
   .portfolio-box{
     height: 245px
@@ -543,6 +560,11 @@ header{
   }
   .about-text h2{
     font-size: 1.5rem
+  }
+  .portfolio-content{
+      display: grid;
+      grid-template-columns: repeat(1,100%);
+      grid-gap: 2rem
   }
 }
 @media (max-width: 471px){
